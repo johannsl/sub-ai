@@ -1,25 +1,25 @@
 import os
 
 # Population types are O(ne-Max), L(OLZ), and S(urprising sequences)
-POPULATION_TYPE = "S" 
-NUMBER_OF_GENERATIONS = 200
+POPULATION_TYPE = "O" 
+NUMBER_OF_GENERATIONS = 100000
 POPULATION_SIZE = 100
 
 # NUMBER_OF_CHILDREN > POPULATION_SIZE should use Over-production repl.
 NUMBER_OF_CHILDREN = 100
-GENOTYPE_LENGTH = 21
+GENOTYPE_LENGTH = 300
 
 # Adult selections are F(ull generation replacement), 
 # O(ver-production replacement), or G(eneration mixing)
-ADULT_SELECTION = "G"
+ADULT_SELECTION = "F"
 
 # Parent selections are F(itness-proportionate), S(igma-scaling), 
 # T(ournament selection), or B(oltzmann scaling)
 PARENT_SELECTION = "T"
 
 # Tournament selection variables
-EPSILON = 0.2
-GROUP_SIZE = 10
+EPSILON = 0.15
+GROUP_SIZE = 20
 
 # Boltzmann scaling variables
 TEMPERATURE = 1 #* (10**4)
@@ -27,7 +27,7 @@ DELTA_T = TEMPERATURE / NUMBER_OF_GENERATIONS
 TEMPERATURE += DELTA_T
 
 CROSSOVER_RATE = 0.01
-CHILDREN_PER_PAIR = 1
+CHILDREN_PER_PAIR = 2
 
 # Mutation types are per G(enome), [or per genome C(omponent) #TODO]
 MUTATION_TYPE = "G" 
